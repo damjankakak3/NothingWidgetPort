@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="20.0dip" android:autoMirrored="true" android:viewportWidth="20.0" android:viewportHeight="24.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,2a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,6a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M12,6a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M4,6a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M0,10a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M16,10a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,10a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,14a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,18a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M8,22a2,2 0,1 0,4 0a2,2 0,1 0,-4 0z" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+</vector>

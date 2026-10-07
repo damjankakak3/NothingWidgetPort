@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">शहर जोड़ने के लिए टैप करें</string><string name="weather_weather_widget_no_connection">कोई कनेक्शन नहीं</string><string name="countdown_no_event_description">कोई ईवेंट नहीं</string>
+    <string name="countdown_hint_today">आज</string>
+    <string name="countdown_hint_until">तक</string>
+    <string name="countdown_hint_since">से</string>
+    <string name="countdown_display_day">दिन</string>
+    <string name="pedometer_todayStepsDes">आज कुल</string>
+    <string name="pedometer_sevenDayAverageDes">7-दिन का औसत</string>
+    </resources>

@@ -1,0 +1,27 @@
+/analysis/
+/artifacts/
+/build/
+/emulator/
+
+# Publish only the small resource inventories from the donor workspace.
+/source/*
+!/source/widget-variants.json
+!/source/imported-resources.json
+
+# Signing material and local configuration never belong in the repo.
+*.keystore
+*.jks
+*.p12
+*.pem
+*.key
+.env
+.env.*
+local.properties
+*.apk
+*.idsig
+*.img
+*.odex
+*.vdex
+__pycache__/
+*.pyc
+.DS_Store

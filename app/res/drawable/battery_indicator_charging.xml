@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="16.0dip" android:width="16.0dip" android:viewportWidth="16.0" android:viewportHeight="16.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/battery_indicator_charging_color_bg" android:pathData="M8,0L8,0A8,8 0,0 1,16 8L16,8A8,8 0,0 1,8 16L8,16A8,8 0,0 1,0 8L0,8A8,8 0,0 1,8 0z" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M8,4m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M7,6m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M6,8m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M8,8m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M10,8m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M9,10m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+    <path android:fillColor="@color/battery_indicator_charging_color" android:pathData="M8,12m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0" />
+</vector>

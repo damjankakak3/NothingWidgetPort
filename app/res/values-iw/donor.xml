@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">הקש כדי להוסיף עיר</string><string name="weather_weather_widget_no_connection">אין חיבור לרשת</string><string name="countdown_no_event_description">אין אירוע</string>
+    <string name="countdown_hint_today">היום</string>
+    <string name="countdown_hint_until">עד</string>
+    <string name="countdown_hint_since">מאז</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">סה\"כ היום</string>
+    <string name="pedometer_sevenDayAverageDes">ממוצע 7 ימים</string>
+    </resources>

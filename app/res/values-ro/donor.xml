@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">atingeți ușor pentru a adăuga orașul</string><string name="weather_weather_widget_no_connection">Nicio conexiune</string><string name="countdown_no_event_description">Niciun eveniment</string>
+    <string name="countdown_hint_today">Astăzi</string>
+    <string name="countdown_hint_until">Până la</string>
+    <string name="countdown_hint_since">De la</string>
+    <string name="countdown_display_day">Z</string>
+    <string name="pedometer_todayStepsDes">Total astăzi</string>
+    <string name="pedometer_sevenDayAverageDes">Medie 7 zile</string>
+    </resources>

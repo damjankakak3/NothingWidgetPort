@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="452.0px" android:width="452.0px" android:autoMirrored="true" android:viewportWidth="172.0" android:viewportHeight="172.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <group>
+        <clip-path android:pathData="M8,86L8,86A10,10 47.59,0 0,18 96L18,96A10,10 47.59,0 0,28 86L28,86A10,10 47.59,0 0,18 76L18,76A10,10 47.59,0 0,8 86z" />
+        <path android:fillColor="@color/compass_font_color" android:pathData="M8,86L8,86A10,10 47.59,0 0,18 96L18,96A10,10 47.59,0 0,28 86L28,86A10,10 47.59,0 0,18 76L18,76A10,10 47.59,0 0,8 86z" />
+        <path android:fillColor="@color/compass_bg_color" android:pathData="M18.56,88.87L18.56,84.78L21.62,84.78L21.62,89.56L23,89.56L23,83.05L13.05,83.05L13.05,89.51L14.44,89.51L14.44,84.78L17.19,84.78L17.19,88.87L18.56,88.87Z" />
+    </group>
+</vector>

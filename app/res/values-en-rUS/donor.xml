@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">tap to add city</string><string name="countdown_no_event_description">No Event</string>
+    <string name="countdown_hint_today">Today</string>
+    <string name="countdown_hint_until">Until</string>
+    <string name="countdown_hint_since">Since</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Total today</string>
+    <string name="pedometer_sevenDayAverageDes">7-day average</string>
+    </resources>

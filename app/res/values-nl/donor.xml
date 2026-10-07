@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">tik om stad toe te voegen</string><string name="weather_weather_widget_no_connection">Geen verbinding</string><string name="countdown_no_event_description">Geen evenement</string>
+    <string name="countdown_hint_today">Vandaag</string>
+    <string name="countdown_hint_until">Tot</string>
+    <string name="countdown_hint_since">Sinds</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Totaal vandaag</string>
+    <string name="pedometer_sevenDayAverageDes">Weekgemiddelde</string>
+    </resources>

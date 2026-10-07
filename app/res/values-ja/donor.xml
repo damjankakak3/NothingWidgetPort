@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">タップで市区町村を追加</string><string name="weather_weather_widget_no_connection">接続されていません</string><string name="countdown_no_event_description">イベントなし</string>
+    <string name="countdown_hint_today">今日</string>
+    <string name="countdown_hint_until">次の時間まで</string>
+    <string name="countdown_hint_since">次の時間以降</string>
+    <string name="countdown_display_day">日</string>
+    <string name="pedometer_todayStepsDes">今日の合計歩数</string>
+    <string name="pedometer_sevenDayAverageDes">7日間の平均歩数</string>
+    </resources>

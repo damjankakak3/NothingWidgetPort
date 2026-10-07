@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">ketik untuk menambah bandar</string><string name="weather_weather_widget_no_connection">Tiada sambungan</string><string name="countdown_no_event_description">Tiada Acara</string>
+    <string name="countdown_hint_today">Hari ini</string>
+    <string name="countdown_hint_until">Sehingga</string>
+    <string name="countdown_hint_since">Sejak</string>
+    <string name="countdown_display_day">H</string>
+    <string name="pedometer_todayStepsDes">Hari ini jml</string>
+    <string name="pedometer_sevenDayAverageDes">Purata 7 hari</string>
+    </resources>

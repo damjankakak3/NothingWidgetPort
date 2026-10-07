@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="147.0px" android:width="105.0px" android:autoMirrored="true" android:viewportWidth="40.0" android:viewportHeight="56.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,4m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M28,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M12,12m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M4,20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M36,20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,20m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,28m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,36m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,44m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+    <path android:fillColor="@color/compass_font_color" android:pathData="M20,52m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:strokeAlpha="0.6" android:fillAlpha="0.6" />
+</vector>

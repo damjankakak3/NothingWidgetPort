@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">點擊新增城市</string><string name="weather_weather_widget_no_connection">沒有網絡</string><string name="countdown_no_event_description">無事件</string>
+    <string name="countdown_hint_today">今天</string>
+    <string name="countdown_hint_until">直到</string>
+    <string name="countdown_hint_since">自從</string>
+    <string name="countdown_display_day">天</string>
+    <string name="pedometer_todayStepsDes">今日累計</string>
+    <string name="pedometer_sevenDayAverageDes">7 天平均</string>
+    </resources>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">nhấn để thêm thành phố</string><string name="weather_weather_widget_no_connection">Không có kết nối</string><string name="countdown_no_event_description">Không có sự kiện</string>
+    <string name="countdown_hint_today">Hôm nay</string>
+    <string name="countdown_hint_until">Cho đến</string>
+    <string name="countdown_hint_since">Kể từ</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Tổng hôm nay</string>
+    <string name="pedometer_sevenDayAverageDes">T.bình 7 ngày</string>
+    </resources>

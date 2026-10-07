@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">Tapnite, če želite dodati mesto</string><string name="weather_weather_widget_no_connection">Ni povezave</string><string name="countdown_no_event_description">Ni dogodka</string>
+    <string name="countdown_hint_today">Danes</string>
+    <string name="countdown_hint_until">Do</string>
+    <string name="countdown_hint_since">Od</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Skupaj danes</string>
+    <string name="pedometer_sevenDayAverageDes">Povprečje 7dni</string>
+    </resources>

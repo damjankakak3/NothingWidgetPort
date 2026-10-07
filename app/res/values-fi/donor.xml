@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">napauta, kun haluat lisätä paikkakunnan</string><string name="weather_weather_widget_no_connection">Ei yhteyttä</string><string name="countdown_no_event_description">Ei tapahtumia</string>
+    <string name="countdown_hint_today">Tänään</string>
+    <string name="countdown_hint_until">tapahtumaan</string>
+    <string name="countdown_hint_since">tapahtumasta</string>
+    <string name="countdown_display_day">P</string>
+    <string name="pedometer_todayStepsDes">Tänään yht.</string>
+    <string name="pedometer_sevenDayAverageDes">7 päivän ka.</string>
+    </resources>

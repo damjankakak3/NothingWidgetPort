@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">Klepnutím přidáte město</string><string name="weather_weather_widget_no_connection">Žádné připojení</string><string name="countdown_no_event_description">Žádná událost</string>
+    <string name="countdown_hint_today">Dnes</string>
+    <string name="countdown_hint_until">Do</string>
+    <string name="countdown_hint_since">Od</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Celkem dnes</string>
+    <string name="pedometer_sevenDayAverageDes">7denní průměr</string>
+    </resources>

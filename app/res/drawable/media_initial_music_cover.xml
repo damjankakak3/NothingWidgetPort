@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="172.0dip" android:width="172.0dip" android:autoMirrored="true" android:viewportWidth="172.0" android:viewportHeight="172.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/color_media_initial_music_cover_bg" android:pathData="M20,0L152,0A20,20 0,0 1,172 20L172,152A20,20 0,0 1,152 172L20,172A20,20 0,0 1,0 152L0,20A20,20 0,0 1,20 0z" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,90m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,90m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,98m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,98m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,82m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,82m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M78,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M78,74m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M102,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M86,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,74m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,74m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M70,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M110,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M94,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M78,58m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M86,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M86,74m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M94,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M94,74m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M102,66m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M102,70C104.21,70 106,71.79 106,74C106,76.21 104.21,78 102,78C99.79,78 98,76.21 98,74C98,71.79 99.79,70 102,70Z" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M62,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M102,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M54,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M94,106m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M62,114m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M102,114m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M54,114m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+    <path android:fillColor="@color/color_media_initial_music_cover_icon" android:pathData="M94,114m0,4a4,4 0,1 1,0 -8a4,4 0,1 1,0 8" />
+</vector>

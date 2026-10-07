@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">탭해서 도시 추가</string><string name="weather_weather_widget_no_connection">연결되지 않음</string><string name="countdown_no_event_description">이벤트 없음</string>
+    <string name="countdown_hint_today">오늘</string>
+    <string name="countdown_hint_until">까지</string>
+    <string name="countdown_hint_since">이후</string>
+    <string name="countdown_display_day">일</string>
+    <string name="pedometer_todayStepsDes">오늘 합계</string>
+    <string name="pedometer_sevenDayAverageDes">7일 평균</string>
+    </resources>

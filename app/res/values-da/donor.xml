@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">Tryk for at tilføje by</string><string name="weather_weather_widget_no_connection">Ingen forbindelse</string><string name="countdown_no_event_description">Ingen begivenhed</string>
+    <string name="countdown_hint_today">I dag</string>
+    <string name="countdown_hint_until">Indtil</string>
+    <string name="countdown_hint_since">Siden</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">I alt i dag</string>
+    <string name="pedometer_sevenDayAverageDes">Gnsn. 7 dage</string>
+    </resources>

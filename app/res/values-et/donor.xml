@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">Puudutage linna lisamiseks</string><string name="weather_weather_widget_no_connection">Ühendus puudub</string><string name="countdown_no_event_description">Sündmusi pole</string>
+    <string name="countdown_hint_today">Täna</string>
+    <string name="countdown_hint_until">Kuni</string>
+    <string name="countdown_hint_since">Alates</string>
+    <string name="countdown_display_day">P</string>
+    <string name="pedometer_todayStepsDes">Täna kokku</string>
+    <string name="pedometer_sevenDayAverageDes">7 päeva keskm</string>
+    </resources>

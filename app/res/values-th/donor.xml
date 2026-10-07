@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">แตะเพื่อเพิ่มเมือง</string><string name="weather_weather_widget_no_connection">ไม่มีการเชื่อมต่อ</string><string name="countdown_no_event_description">ไม่มีกิจกรรม</string>
+    <string name="countdown_hint_today">วันนี้</string>
+    <string name="countdown_hint_until">จนกระทั่ง</string>
+    <string name="countdown_hint_since">ตั้งแต่</string>
+    <string name="countdown_display_day">ว</string>
+    <string name="pedometer_todayStepsDes">รวมวันนี้</string>
+    <string name="pedometer_sevenDayAverageDes">เฉลี่ย 7 วัน</string>
+    </resources>

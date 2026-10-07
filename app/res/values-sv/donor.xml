@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">tryck för att lägga till stad</string><string name="weather_weather_widget_no_connection">Ingen anslutning</string><string name="countdown_no_event_description">Ingen händelse</string>
+    <string name="countdown_hint_today">Idag</string>
+    <string name="countdown_hint_until">Tills</string>
+    <string name="countdown_hint_since">Sedan</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Totalt idag</string>
+    <string name="pedometer_sevenDayAverageDes">7-dagars gen.</string>
+    </resources>

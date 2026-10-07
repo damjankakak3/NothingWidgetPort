@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">നഗരം ചേർക്കാൻ ടാപ്പ് ചെയ്യുക</string><string name="weather_weather_widget_no_connection">കണക്ഷനില്ല</string><string name="countdown_no_event_description">ഇവൻ്റ് ഇല്ല</string>
+    <string name="countdown_hint_today">ഇന്ന്</string>
+    <string name="countdown_hint_until">അതുവരെ</string>
+    <string name="countdown_hint_since">അന്നുമുതൽ</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">ഇന്ന് ആകെ</string>
+    <string name="pedometer_sevenDayAverageDes">7 ദിവസ ശരാശരി</string>
+    </resources>

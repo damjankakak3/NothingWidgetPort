@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">appuyez pour ajouter la ville</string><string name="weather_weather_widget_no_connection">Aucune connexion</string><string name="countdown_no_event_description">Aucun événement</string>
+    <string name="countdown_hint_today">AUJ</string>
+    <string name="countdown_hint_until">Avant</string>
+    <string name="countdown_hint_since">Depuis</string>
+    <string name="countdown_display_day">J</string>
+    <string name="pedometer_todayStepsDes">Tot. auj.</string>
+    <string name="pedometer_sevenDayAverageDes">Moy. 7 jours</string>
+    </resources>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">нажмите, чтобы добавить город</string><string name="weather_weather_widget_no_connection">Нет соединения</string><string name="countdown_no_event_description">Нет событий</string>
+    <string name="countdown_hint_today">Сегодня</string>
+    <string name="countdown_hint_until">До</string>
+    <string name="countdown_hint_since">От</string>
+    <string name="countdown_display_day">Д</string>
+    <string name="pedometer_todayStepsDes">Всего сегодня</string>
+    <string name="pedometer_sevenDayAverageDes">Сред. за 7 дн.</string>
+    </resources>

@@ -1,0 +1,250 @@
+[
+  [
+    "AnalogBold",
+    "Analog clock \u00b7 Bold",
+    "Clocks",
+    2,
+    2,
+    "analog_bold"
+  ],
+  [
+    "AnalogScale",
+    "Analog clock \u00b7 Marks",
+    "Clocks",
+    2,
+    2,
+    "analog_scale"
+  ],
+  [
+    "DigitalSquare",
+    "Digital clock \u00b7 Stacked",
+    "Clocks",
+    2,
+    2,
+    "digital_square"
+  ],
+  [
+    "DigitalWide",
+    "Digital clock \u00b7 Wide",
+    "Clocks",
+    2,
+    1,
+    "digital_wide"
+  ],
+  [
+    "World",
+    "World clock",
+    "Clocks",
+    2,
+    2,
+    "world"
+  ],
+  [
+    "Date",
+    "Date",
+    "Date",
+    2,
+    2,
+    "date"
+  ],
+  [
+    "QuickTransparent",
+    "Quick Look \u00b7 Transparent",
+    "Quick Look",
+    4,
+    1,
+    "quick_transparent"
+  ],
+  [
+    "QuickCard",
+    "Quick Look \u00b7 Card",
+    "Quick Look",
+    2,
+    2,
+    "quick_card"
+  ],
+  [
+    "PhotoCircle",
+    "Photos \u00b7 Circle",
+    "Photos",
+    2,
+    2,
+    "photo_circle"
+  ],
+  [
+    "PhotoRectangle",
+    "Photos \u00b7 Rectangle",
+    "Photos",
+    2,
+    2,
+    "photo_rectangle"
+  ],
+  [
+    "Compass",
+    "Compass",
+    "Compass",
+    2,
+    2,
+    "compass"
+  ],
+  [
+    "CompassSmall",
+    "Compass \u00b7 Small",
+    "Compass",
+    1,
+    1,
+    "compass"
+  ],
+  [
+    "Steps",
+    "Steps",
+    "Steps",
+    2,
+    2,
+    "steps"
+  ],
+  [
+    "StepsProgress",
+    "Steps \u00b7 Goal progress",
+    "Steps",
+    2,
+    1,
+    "steps_progress"
+  ],
+  [
+    "StepsDaily",
+    "Steps \u00b7 Daily count",
+    "Steps",
+    2,
+    1,
+    "steps_daily"
+  ],
+  [
+    "StepsStreak",
+    "Steps \u00b7 Weekly streak",
+    "Steps",
+    2,
+    1,
+    "steps_streak"
+  ],
+  [
+    "ScreenTime",
+    "Screen time",
+    "Screen time",
+    2,
+    2,
+    "screen"
+  ],
+  [
+    "ScreenDuration",
+    "Screen time \u00b7 Duration",
+    "Screen time",
+    2,
+    1,
+    "screen_duration"
+  ],
+  [
+    "ScreenShape",
+    "Screen time \u00b7 Usage",
+    "Screen time",
+    2,
+    1,
+    "screen_shape"
+  ],
+  [
+    "ScreenFace",
+    "Screen time \u00b7 Face",
+    "Screen time",
+    1,
+    1,
+    "screen_face"
+  ],
+  [
+    "Media",
+    "Media player",
+    "Media",
+    2,
+    2,
+    "media"
+  ],
+  [
+    "Battery",
+    "Battery \u00b7 Devices",
+    "Battery",
+    2,
+    2,
+    "battery"
+  ],
+  [
+    "BatterySmall",
+    "Battery \u00b7 Phone",
+    "Battery",
+    1,
+    1,
+    "battery_small"
+  ],
+  [
+    "Countdown",
+    "Countdown",
+    "Countdown",
+    2,
+    2,
+    "countdown"
+  ],
+  [
+    "BreathRelax",
+    "Breathing \u00b7 Relax",
+    "Breathing",
+    2,
+    2,
+    "breath_relax"
+  ],
+  [
+    "BreathFocus",
+    "Breathing \u00b7 Focus",
+    "Breathing",
+    2,
+    2,
+    "breath_focus"
+  ],
+  [
+    "BreathCalm",
+    "Breathing \u00b7 Calm",
+    "Breathing",
+    2,
+    2,
+    "breath_calm"
+  ],
+  [
+    "WeatherCircle",
+    "Weather \u00b7 Circle",
+    "Weather",
+    2,
+    2,
+    "weather_circle"
+  ],
+  [
+    "WeatherSquare",
+    "Weather \u00b7 Square",
+    "Weather",
+    2,
+    2,
+    "weather_square"
+  ],
+  [
+    "WeatherWide",
+    "Weather \u00b7 Forecast",
+    "Weather",
+    4,
+    2,
+    "weather_wide"
+  ],
+  [
+    "WeatherCombo",
+    "Weather \u00b7 Combo",
+    "Weather",
+    2,
+    2,
+    "weather_combo"
+  ]
+]

@@ -1,0 +1,37 @@
+package dev.dipa.widgets;
+public final class Registry {
+ public static final String[][] ITEMS = {
+  {"AnalogBold","Analog clock · Bold","Clocks","2","2","analog_bold"},
+  {"AnalogScale","Analog clock · Marks","Clocks","2","2","analog_scale"},
+  {"DigitalSquare","Digital clock · Stacked","Clocks","2","2","digital_square"},
+  {"DigitalWide","Digital clock · Wide","Clocks","2","1","digital_wide"},
+  {"World","World clock","Clocks","2","2","world"},
+  {"Date","Date","Date","2","2","date"},
+  {"QuickTransparent","Quick Look · Transparent","Quick Look","4","1","quick_transparent"},
+  {"QuickCard","Quick Look · Card","Quick Look","2","2","quick_card"},
+  {"PhotoCircle","Photos · Circle","Photos","2","2","photo_circle"},
+  {"PhotoRectangle","Photos · Rectangle","Photos","2","2","photo_rectangle"},
+  {"Compass","Compass","Compass","2","2","compass"},
+  {"CompassSmall","Compass · Small","Compass","1","1","compass"},
+  {"Steps","Steps","Steps","2","2","steps"},
+  {"StepsProgress","Steps · Goal progress","Steps","2","1","steps_progress"},
+  {"StepsDaily","Steps · Daily count","Steps","2","1","steps_daily"},
+  {"StepsStreak","Steps · Weekly streak","Steps","2","1","steps_streak"},
+  {"ScreenTime","Screen time","Screen time","2","2","screen"},
+  {"ScreenDuration","Screen time · Duration","Screen time","2","1","screen_duration"},
+  {"ScreenShape","Screen time · Usage","Screen time","2","1","screen_shape"},
+  {"ScreenFace","Screen time · Face","Screen time","1","1","screen_face"},
+  {"Media","Media player","Media","2","2","media"},
+  {"Battery","Battery · Devices","Battery","2","2","battery"},
+  {"BatterySmall","Battery · Phone","Battery","1","1","battery_small"},
+  {"Countdown","Countdown","Countdown","2","2","countdown"},
+  {"BreathRelax","Breathing · Relax","Breathing","2","2","breath_relax"},
+  {"BreathFocus","Breathing · Focus","Breathing","2","2","breath_focus"},
+  {"BreathCalm","Breathing · Calm","Breathing","2","2","breath_calm"},
+  {"WeatherCircle","Weather · Circle","Weather","2","2","weather_circle"},
+  {"WeatherSquare","Weather · Square","Weather","2","2","weather_square"},
+  {"WeatherWide","Weather · Forecast","Weather","4","2","weather_wide"},
+  {"WeatherCombo","Weather · Combo","Weather","2","2","weather_combo"},
+ };
+ public static String[] find(String name) { for(String[] row:ITEMS) if(row[0].equals(name)) return row; return ITEMS[0]; }
+}

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">πατήστε για να προσθέσετε πόλη</string><string name="weather_weather_widget_no_connection">Δεν υπάρχει σύνδεση</string><string name="countdown_no_event_description">Κανένα Συμβάν</string>
+    <string name="countdown_hint_today">Σήμερα</string>
+    <string name="countdown_hint_until">Μέχρι</string>
+    <string name="countdown_hint_since">Καθώς</string>
+    <string name="countdown_display_day">Η</string>
+    <string name="pedometer_todayStepsDes">Σύνολο σήμερα</string>
+    <string name="pedometer_sevenDayAverageDes">Μέσος όρος 7ημ</string>
+    </resources>

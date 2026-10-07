@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">నగరాన్ని జోడించడానికి ట్యాప్ చేయండి</string><string name="weather_weather_widget_no_connection">కనెక్షన్ లేదు</string><string name="countdown_no_event_description">ఈవెంట్ లేదు</string>
+    <string name="countdown_hint_today">ఈ రోజు</string>
+    <string name="countdown_hint_until">వరకు</string>
+    <string name="countdown_hint_since">నుండి</string>
+    <string name="countdown_display_day">తే</string>
+    <string name="pedometer_todayStepsDes">ఈరోజు మొత్తం</string>
+    <string name="pedometer_sevenDayAverageDes">7-రోజుల సగటు</string>
+    </resources>

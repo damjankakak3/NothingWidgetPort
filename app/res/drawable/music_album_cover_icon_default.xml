@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:height="172.0dip" android:width="172.0dip">
+        <shape>
+            <solid android:color="#00000000" />
+        </shape>
+    </item>
+    <item android:gravity="center" android:id="@id/music_default_icon" android:drawable="@drawable/music_cover_default" />
+</layer-list>

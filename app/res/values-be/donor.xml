@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">краніцеся, каб дадаць горад</string><string name="weather_weather_widget_no_connection">Няма падключэння</string><string name="countdown_no_event_description">Няма падзей</string>
+    <string name="countdown_hint_today">Сёння</string>
+    <string name="countdown_hint_until">Да падзеі</string>
+    <string name="countdown_hint_since">Ад падзеі</string>
+    <string name="countdown_display_day">Дз</string>
+    <string name="pedometer_todayStepsDes">Усяго сёння</string>
+    <string name="pedometer_sevenDayAverageDes">Сяр. за 7 дзён</string>
+    </resources>

@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="weather_widget_tap_to_add_city">pieskarieties, lai pievienotu pilsētu</string><string name="weather_weather_widget_no_connection">Nav savienojuma</string><string name="countdown_no_event_description">Nav notikumu</string>
+    <string name="countdown_hint_today">Šodien</string>
+    <string name="countdown_hint_until">Līdz</string>
+    <string name="countdown_hint_since">Kopš</string>
+    <string name="countdown_display_day">D</string>
+    <string name="pedometer_todayStepsDes">Kopā šodien</string>
+    <string name="pedometer_sevenDayAverageDes">7 dienās vid.</string>
+    </resources>
