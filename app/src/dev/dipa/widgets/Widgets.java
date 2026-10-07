@@ -63,8 +63,11 @@ public class Widgets extends AppWidgetProvider {
         PendingResult result = goAsync();
         WORK.execute(() -> {
             try {
+                boolean batteryGroup=false;
+                for(int id:ids){AppWidgetProviderInfo info=m.getAppWidgetInfo(id);if(info!=null&&Registry.find(kind(info))[2].equals("Battery"))batteryGroup=true;}
+                if(batteryGroup)BluetoothBatteries.refresh(c);
                 for (int id:ids) { AppWidgetProviderInfo info=m.getAppWidgetInfo(id); if(info!=null) m.updateAppWidget(id,render(c,kind(info),id,m.getAppWidgetOptions(id))); }
-                RefreshJob.schedule(c, hasGroup(c,"Weather") || hasGroup(c,"Quick Look"));
+                RefreshJob.reconcile(c);
             } finally { result.finish(); }
         });
     }
@@ -77,6 +80,7 @@ public class Widgets extends AppWidgetProvider {
         e.apply();
         RefreshJob.schedule(c,hasGroup(c,"Weather")||hasGroup(c,"Quick Look"));
         if(!hasGroup(c,"Steps")) { Data.prefs(c).edit().putBoolean("tracking",false).apply(); c.stopService(new Intent(c,StepService.class)); }
+        if(!hasGroup(c,"Compass")) CompassService.stop(c);
     }
     static int resource(Context c,String type,String name) { return c.getResources().getIdentifier(name,type,c.getPackageName()); }
     static void txt(Context c,RemoteViews v,String id,CharSequence value) {
@@ -144,12 +148,14 @@ public class Widgets extends AppWidgetProvider {
             return v;
         }
         if(group.equals("Compass")||group.equals("Countdown")||group.equals("Media")||group.equals("Weather")) {
-            Bitmap art=group.equals("Compass")?CompassArtwork.render(c,name,width,height,p.getFloat("compass",Float.NaN))
+            Bitmap art=group.equals("Compass")?CompassArtwork.render(c,name,width,height,CompassState.read(c))
                 :group.equals("Countdown")?CountdownArtwork.render(c,width,height,id)
                 :group.equals("Weather")?WeatherArtwork.render(c,name,width,height,p.getInt("page:"+id,0))
                 :MediaArtwork.render(c,width,height,MediaService.controller(c),p.getInt("page:"+id,0));
             v.setImageViewBitmap(R.id.artwork,art);
-            v.setContentDescription(R.id.artwork,Registry.find(name)[1]);
+            float bearing = group.equals("Compass") ? CompassState.read(c) : Float.NaN;
+            v.setContentDescription(R.id.artwork,group.equals("Compass") && Float.isFinite(bearing)
+                ? "Magnetic bearing " + Math.round(bearing) + " degrees" : Registry.find(name)[1]);
             if(group.equals("Weather")&&p.contains("city")&&(name.equals("WeatherCircle")||name.equals("WeatherSquare")))v.setOnClickPendingIntent(R.id.artwork,action(c,name,id,"page"));
             if(group.equals("Countdown")&&p.contains("date:"+id))v.setOnClickPendingIntent(R.id.artwork,action(c,name,id,"page"));
             if(group.equals("Media")) {

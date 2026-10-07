@@ -76,7 +76,7 @@ public final class ConfigureActivity extends Activity {
                 status.setText("Finding your city…");
                 prefs.edit().putBoolean("fahrenheit",units.isChecked()).apply();
                 WORK.execute(()->{
-                    try { String found=Data.findCity(this,query);Data.refreshWeather(this,true);Widgets.updateAll(this);
+                    try { String found=Data.findCity(this,query);Data.refreshWeather(this,true);Widgets.updateAll(this);RefreshJob.reconcile(this);
                         runOnUiThread(()->{status.setText("Updated for "+found);if(widgetId>=0)done();}); }
                     catch(Exception e) {runOnUiThread(()->status.setText(e.getMessage()==null?"Weather unavailable. Try again.":e.getMessage()));}
                 });
@@ -113,12 +113,21 @@ public final class ConfigureActivity extends Activity {
             UI.button(this,page,"Enable media controls",()->startActivity(new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)));
         } else if(group.equals("Compass")||group.equals("Breathing")) {
             UI.text(this,page,group.equals("Compass")?"Find your direction":"Take a moment",22);
-            UI.text(this,page,group.equals("Compass")?"Tap the widget to open a live compass. Sensors stop when you leave the session. The home-screen reading is the last measured bearing.":"Tap the widget to begin a breathing session. Animations run only while the session is visible.",15);
+            UI.text(this,page,group.equals("Compass")?"Live widgets use a persistent notification and refresh when your heading changes. Sensors pause while the phone is locked or its screen is off. The arrow shows the top of your phone; the north marker rotates around it.":"Tap the widget to begin a breathing session. Animations run only while the session is visible.",15);
+            if(group.equals("Compass")) {
+                status.setText(prefs.getBoolean("compass_tracking",false)?"Live compass widgets enabled":"Live compass widgets stopped");
+                UI.button(this,page,"Start live widgets",()->{
+                    if(!Widgets.hasGroup(this,"Compass")){status.setText("Add a compass widget to your home screen first.");return;}
+                    try {CompassService.start(this);status.setText("Live compass widgets enabled");}
+                    catch(Exception e){status.setText("Could not start compass: "+e.getMessage());}
+                });
+                UI.button(this,page,"Stop live widgets",()->{CompassService.stop(this);status.setText("Live compass widgets stopped");});
+            }
             UI.button(this,page,"Open session",()->startActivity(new Intent(this,SessionActivity.class).putExtra("kind",kind)));
         } else if(group.equals("Battery")) {
             UI.text(this,page,"Battery status",22);
             UI.text(this,page,"The phone reading refreshes on Android’s power broadcasts, periodic widget updates, and taps. Connected-device percentages are shown only when Android reports them.",15);
-            UI.button(this,page,"Refresh now",()->{Widgets.updateGroup(this,"Battery");status.setText("Battery refreshed");});
+            UI.button(this,page,"Refresh now",()->refreshBatteries());
             UI.button(this,page,"Allow connected devices",()->requestPermissions(new String[]{Manifest.permission.BLUETOOTH_CONNECT},74));
         } else UI.text(this,page,"This widget updates with Android’s native clock and date views.",16);
         UI.button(this,page,"Done",this::done);
@@ -127,6 +136,11 @@ public final class ConfigureActivity extends Activity {
         if(!Data.prefs(this).getBoolean("tracking",false))Data.prefs(this).edit().remove("sensor_previous").apply();
         try {startForegroundService(new Intent(this,StepService.class));status.setText("Step tracking enabled");}
         catch(Exception e){status.setText("Could not start step tracking: "+e.getMessage());}
+    }
+    private void refreshBatteries() {
+        status.setText("Reading connected-device batteries…");
+        WORK.execute(()->{BluetoothBatteries.refresh(this);Widgets.updateGroup(this,"Battery");
+            runOnUiThread(()->status.setText(Data.prefs(this).getString("bluetooth_status","Battery refreshed")));});
     }
     private void done() {
         Widgets.updateAll(this);
@@ -152,8 +166,12 @@ public final class ConfigureActivity extends Activity {
         super.onRequestPermissionsResult(request,permissions,results);
         if(request==73&&checkSelfPermission(Manifest.permission.ACTIVITY_RECOGNITION)==PackageManager.PERMISSION_GRANTED)startTracking();
         else if(request==73)status.setText("Activity recognition permission is needed to count steps.");
+        if(request==74&&BluetoothBatteries.allowed(this)) {
+            if(batteryReceiver==null)batteryReceiver=BluetoothBatteries.listen(this);
+            refreshBatteries();
+        }
         Widgets.updateAll(this);
     }
-    @Override protected void onResume(){super.onResume();batteryReceiver=BluetoothBatteries.listen(this);Widgets.updateAll(this);}
+    @Override protected void onResume(){super.onResume();batteryReceiver=BluetoothBatteries.listen(this);BluetoothBatteries.requestRefresh(this);Widgets.updateAll(this);RefreshJob.reconcile(this);}
     @Override protected void onPause(){if(batteryReceiver!=null){unregisterReceiver(batteryReceiver);batteryReceiver=null;}super.onPause();}
 }

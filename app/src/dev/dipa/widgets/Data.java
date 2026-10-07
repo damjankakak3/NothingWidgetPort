@@ -74,7 +74,7 @@ public final class Data {
     public static JSONObject getJson(String url) throws Exception {
         HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
         connection.setConnectTimeout(12000); connection.setReadTimeout(12000);
-        connection.setRequestProperty("User-Agent", "NothingWidget/0.3.1");
+        connection.setRequestProperty("User-Agent", "NothingWidget/0.3.2");
         try {
             if (connection.getResponseCode() != 200) throw new IOException("Weather server returned " + connection.getResponseCode());
             try (InputStream in = connection.getInputStream(); ByteArrayOutputStream out = new ByteArrayOutputStream()) {
@@ -97,15 +97,23 @@ public final class Data {
             .putString("lon", result.getString("longitude")).remove("weather_time").apply();
         return label;
     }
-    public static void refreshWeather(Context c, boolean force) throws Exception {
+    public static boolean weatherStale(Context c) {
+        long updated = prefs(c).getLong("weather_time", 0), now = System.currentTimeMillis();
+        return updated <= 0 || now < updated || now - updated >= 3600000L;
+    }
+    public static synchronized void refreshWeather(Context c, boolean force) throws Exception {
         SharedPreferences p = prefs(c);
         if (!p.contains("lat")) return;
-        if (!force && System.currentTimeMillis() - p.getLong("weather_time", 0) < 3600000L) return;
-        String url = "https://api.open-meteo.com/v1/forecast?latitude=" + p.getString("lat", "0")
-            + "&longitude=" + p.getString("lon", "0")
+        if (!force && !weatherStale(c)) return;
+        String lat = p.getString("lat", "0"), lon = p.getString("lon", "0");
+        String url = "https://api.open-meteo.com/v1/forecast?latitude=" + lat
+            + "&longitude=" + lon
             + "&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,wind_speed_10m,is_day"
             + "&daily=temperature_2m_max,temperature_2m_min,weather_code&forecast_days=6&timezone=auto";
         JSONObject response = getJson(url), current = response.getJSONObject("current"), daily = response.getJSONObject("daily");
+        if (Thread.currentThread().isInterrupted()) throw new InterruptedException("Weather job stopped");
+        // A city selected during this request must not receive the previous city's forecast.
+        if (!lat.equals(p.getString("lat", "")) || !lon.equals(p.getString("lon", ""))) return;
         SharedPreferences.Editor edit = p.edit().putString("weather", current.toString()).putString("forecast", daily.toString())
             .putLong("weather_time", System.currentTimeMillis()).remove("weather_error");
         edit.apply();

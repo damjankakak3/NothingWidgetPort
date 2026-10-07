@@ -15,7 +15,8 @@ public final class SessionActivity extends Activity implements SensorEventListen
     private TextView bearing;
     private SessionView visual;
     private ValueAnimator animator;
-    private float heading;
+    private float heading = Float.NaN;
+    private final float[] rotation = new float[9], remapped = new float[9], orientation = new float[3];
     @Override public void onCreate(Bundle b) {
         super.onCreate(b);kind=getIntent().getStringExtra("kind");if(kind==null)kind="Compass";
         boolean compass=kind.startsWith("Compass");
@@ -35,10 +36,18 @@ public final class SessionActivity extends Activity implements SensorEventListen
     }
     @Override protected void onResume() {
         super.onResume();
-        if(sensors!=null) {Sensor s=sensors.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);if(s!=null)sensors.registerListener(this,s,SensorManager.SENSOR_DELAY_UI);}
+        if(sensors!=null) {
+            Sensor s=sensors.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+            if(s==null)s=sensors.getDefaultSensor(Sensor.TYPE_GEOMAGNETIC_ROTATION_VECTOR);
+            if(s!=null)sensors.registerListener(this,s,SensorManager.SENSOR_DELAY_UI);
+            if(getIntent().getIntExtra(android.appwidget.AppWidgetManager.EXTRA_APPWIDGET_ID,-1)>=0) {
+                try { CompassService.start(this); }
+                catch(Exception e) { android.util.Log.w("NothingWidget","Could not start live compass",e); }
+            }
+        }
     }
     @Override protected void onPause() {
-        if(sensors!=null) {sensors.unregisterListener(this);Data.prefs(this).edit().putFloat("compass",heading).apply();Widgets.updateGroup(this,"Compass");}
+        if(sensors!=null) {sensors.unregisterListener(this);CompassState.save(this);Widgets.updateGroup(this,"Compass");}
         stopAnimation();super.onPause();
     }
     private void startAnimation() {
@@ -61,8 +70,8 @@ public final class SessionActivity extends Activity implements SensorEventListen
     }
     private void stopAnimation(){if(animator!=null){animator.cancel();animator=null;}}
     @Override public void onSensorChanged(SensorEvent e) {
-        float[] rotation=new float[9],orientation=new float[3];SensorManager.getRotationMatrixFromVector(rotation,e.values);SensorManager.getOrientation(rotation,orientation);
-        heading=(float)((Math.toDegrees(orientation[0])+360)%360);visual.angle=heading;visual.invalidate();
+        heading=CompassState.bearing(e.values,getWindowManager().getDefaultDisplay().getRotation(),rotation,remapped,orientation);
+        CompassState.set(heading);visual.angle=heading;visual.invalidate();
         String direction=new String[]{"N","NE","E","SE","S","SW","W","NW"}[(int)((heading+22.5)/45)%8];
         bearing.setText(Math.round(heading)+"° "+direction);
     }

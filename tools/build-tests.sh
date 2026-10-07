@@ -9,9 +9,9 @@ export KEYSTORE_PASSWORD="${KEYSTORE_PASSWORD:-localwidgets}"
 task_alias="${KEYSTORE_ALIAS:-personal}"
 mkdir -p "$task_root/build/test/classes" "$task_root/build/test/dex"
 cat > "$task_root/build/test/AndroidManifest.xml" <<'XML'
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.dipa.widgets.tests"><uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36"/><queries><package android:name="com.nothing.hearthstone"/></queries><application android:label="NothingWidget tests"/><instrumentation android:name="dev.dipa.widgets.tests.WidgetInstrumentation" android:targetPackage="dev.dipa.widgets"/><instrumentation android:name="dev.dipa.widgets.tests.OriginalReferenceInstrumentation" android:targetPackage="dev.dipa.widgets.tests"/></manifest>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="dev.dipa.widgets.tests"><uses-sdk android:minSdkVersion="31" android:targetSdkVersion="36"/><queries><package android:name="com.nothing.hearthstone"/></queries><application android:label="NothingWidget tests"/><instrumentation android:name="dev.dipa.widgets.tests.WidgetInstrumentation" android:targetPackage="dev.dipa.widgets"/><instrumentation android:name="dev.dipa.widgets.tests.OriginalReferenceInstrumentation" android:targetPackage="dev.dipa.widgets.tests"/><instrumentation android:name="dev.dipa.widgets.tests.RuntimeInstrumentation" android:targetPackage="dev.dipa.widgets"/></manifest>
 XML
-javac --release 11 -encoding UTF-8 -cp "$task_android:$task_root/build/classes" -d "$task_root/build/test/classes" "$task_root/tools/WidgetInstrumentation.java" "$task_root/tools/OriginalReferenceInstrumentation.java"
+javac --release 11 -encoding UTF-8 -cp "$task_android:$task_root/build/classes" -d "$task_root/build/test/classes" "$task_root/tools/WidgetInstrumentation.java" "$task_root/tools/OriginalReferenceInstrumentation.java" "$task_root/tools/RuntimeInstrumentation.java"
 jar cf "$task_root/build/test/tests.jar" -C "$task_root/build/test/classes" .
 "$task_tools/d8" --min-api 31 --lib "$task_android" --classpath "$task_root/build/classes.jar" --output "$task_root/build/test/dex" "$task_root/build/test/tests.jar"
 "$task_tools/aapt2" link -I "$task_android" --manifest "$task_root/build/test/AndroidManifest.xml" -o "$task_root/build/test/unsigned.apk"

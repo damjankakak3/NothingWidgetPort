@@ -12,7 +12,7 @@ Weather uses a disclosed forecast service. Other data stays on the device. Reque
 
 Use the original Nothing artwork, dot fonts, and red accents for widgets. Use standard Android controls for setup and permission screens. Show real widget previews and group variants by function.
 
-Keep ordinary widgets free of a resident service. Steps use an opt-in hardware-counter service; media uses Android's session callbacks. Explain tap-driven pages and visible compass or breathing sessions in setup. A cached bearing must not be presented as a continuous live measurement.
+Keep ordinary widgets free of a resident service. Steps use an opt-in hardware-counter service; live compass widgets use a user-started foreground service that pauses sensing while the phone is locked or screen-off. Media uses Android's session callbacks. Explain tap-driven pages and visible compass or breathing sessions in setup. A stopped compass retains its last bearing. Setup and the notification must distinguish live sensing from a stored reading.
 
 ## Accessibility
 

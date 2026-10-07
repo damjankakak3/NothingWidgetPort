@@ -10,7 +10,7 @@ import java.util.*;
 public final class MainActivity extends Activity {
     private BluetoothBatteries batteryReceiver;
     @Override public void onCreate(Bundle b) { super.onCreate(b); show(); }
-    @Override protected void onResume(){super.onResume();batteryReceiver=BluetoothBatteries.listen(this);}
+    @Override protected void onResume(){super.onResume();batteryReceiver=BluetoothBatteries.listen(this);BluetoothBatteries.requestRefresh(this);RefreshJob.reconcile(this);}
     @Override protected void onPause(){if(batteryReceiver!=null){unregisterReceiver(batteryReceiver);batteryReceiver=null;}super.onPause();}
     private void show() {
         LinearLayout page=UI.page(this,"NothingWidget");

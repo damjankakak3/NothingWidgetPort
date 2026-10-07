@@ -241,10 +241,10 @@ for name,label,group,w,h,layout in variants:
 (DEST/'values').mkdir(exist_ok=True)
 ET.ElementTree(labels).write(DEST/'values/app.xml',encoding='utf-8',xml_declaration=True)
 
-manifest = ET.Element('manifest', {'package':'dev.dipa.widgets',f'{{{ANDROID}}}versionCode':'6',f'{{{ANDROID}}}versionName':'0.3.1'})
+manifest = ET.Element('manifest', {'package':'dev.dipa.widgets',f'{{{ANDROID}}}versionCode':'7',f'{{{ANDROID}}}versionName':'0.3.2'})
 def element(parent,tag,**attrs): return ET.SubElement(parent,tag,{f'{{{ANDROID}}}{k}':str(v) for k,v in attrs.items()})
 element(manifest,'uses-sdk',minSdkVersion=31,targetSdkVersion=36)
-for permission in ['INTERNET','ACCESS_NETWORK_STATE','READ_CALENDAR','ACTIVITY_RECOGNITION','PACKAGE_USAGE_STATS','FOREGROUND_SERVICE','FOREGROUND_SERVICE_HEALTH','POST_NOTIFICATIONS','RECEIVE_BOOT_COMPLETED','BLUETOOTH_CONNECT']:
+for permission in ['INTERNET','ACCESS_NETWORK_STATE','READ_CALENDAR','ACTIVITY_RECOGNITION','PACKAGE_USAGE_STATS','FOREGROUND_SERVICE','FOREGROUND_SERVICE_HEALTH','FOREGROUND_SERVICE_SPECIAL_USE','POST_NOTIFICATIONS','RECEIVE_BOOT_COMPLETED','BLUETOOTH_CONNECT']:
     element(manifest,'uses-permission',name='android.permission.'+permission)
 element(manifest,'uses-feature',name='android.hardware.sensor.stepcounter',required='false')
 element(manifest,'uses-feature',name='android.hardware.sensor.compass',required='false')
@@ -260,15 +260,19 @@ for name,label,group,w,h,layout in variants:
     element(receiver,'meta-data',name='android.appwidget.provider',resource='@xml/widget_'+name.lower())
 element(app,'service',name='.RefreshJob',permission='android.permission.BIND_JOB_SERVICE',exported='false')
 element(app,'service',name='.StepService',foregroundServiceType='health',exported='false')
+compass=element(app,'service',name='.CompassService',foregroundServiceType='specialUse',exported='false')
+element(compass,'property',name='android.app.PROPERTY_SPECIAL_USE_FGS_SUBTYPE',value='User-enabled magnetic compass for placed home-screen widgets; sensors pause while locked or screen-off and artwork updates at most once per second.')
 bluetooth_receiver=element(app,'receiver',name='.BluetoothBatteries',exported='true',permission='android.permission.BLUETOOTH_CONNECT')
 flt=ET.SubElement(bluetooth_receiver,'intent-filter')
 element(flt,'action',name='android.bluetooth.device.action.BATTERY_LEVEL_CHANGED')
 element(flt,'action',name='android.bluetooth.device.action.ACL_DISCONNECTED')
+for action in ['android.bluetooth.device.action.ACL_CONNECTED','android.bluetooth.adapter.action.STATE_CHANGED','android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED','android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED']:
+    element(flt,'action',name=action)
 service=element(app,'service',name='.MediaService',permission='android.permission.BIND_NOTIFICATION_LISTENER_SERVICE',exported='true',label='NothingWidget media controls')
 flt=ET.SubElement(service,'intent-filter'); element(flt,'action',name='android.service.notification.NotificationListenerService')
 receiver=element(app,'receiver',name='.Events',exported='false')
 flt=ET.SubElement(receiver,'intent-filter')
-for action in ['BOOT_COMPLETED','DATE_CHANGED','TIME_SET','TIMEZONE_CHANGED','LOCALE_CHANGED','ACTION_POWER_CONNECTED','ACTION_POWER_DISCONNECTED','BATTERY_LOW','BATTERY_OKAY']:
+for action in ['BOOT_COMPLETED','MY_PACKAGE_REPLACED','DATE_CHANGED','TIME_SET','TIMEZONE_CHANGED','LOCALE_CHANGED','ACTION_POWER_CONNECTED','ACTION_POWER_DISCONNECTED','BATTERY_LOW','BATTERY_OKAY']:
     element(flt,'action',name='android.intent.action.'+action)
 ET.ElementTree(manifest).write(ROOT/'app/AndroidManifest.xml',encoding='utf-8',xml_declaration=True)
 
